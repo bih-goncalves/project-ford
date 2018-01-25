@@ -1,10 +1,32 @@
 <nav class="menu_inf row">
-    <div class="col-md-2">
+    <div class="col-md-3">
         <span ng-click="" class="glyphicon glyphicon-th"></span>  
         <span ng-click="" class="glyphicon glyphicon-th-list"></span>
     </div>
-    <div class="col-md-8 text-center">
-        menu central
+    <div class="col-md-2 text-center">
+            <div class="form-group">
+                <ui-select ng-model="filter.status" theme="bootstrap">
+                <ui-select-match placeholder="Filtrar por status...">{{$select.selected}}</ui-select-match>
+                <ui-select-choices repeat="item in status | filter: $select.search">
+                    <div ng-bind-html="item | highlight: $select.search"></div>
+                </ui-select-choices>
+                </ui-select>
+            </div>
+    </div>
+    <div class="col-md-2 text-center">
+            <div class="form-group">
+                <ui-select ng-model="filter.ordem" theme="bootstrap">
+                <ui-select-match placeholder="Ordenar por...">{{$select.selected}}</ui-select-match>
+                <ui-select-choices repeat="item in ordem | filter: $select.search">
+                    <div ng-bind-html="item | highlight: $select.search"></div>
+                </ui-select-choices>
+                </ui-select>
+            </div>
+    </div>
+    <div class="col-md-3">
+            <form action="">
+                <input type="checkbox" name="favoritos"> Mostrar somente favoritos
+            </form>
     </div>
     <div class="col-md-2">
         pesquisa lateral <span class="glyphicon glyphicon-search"></span>

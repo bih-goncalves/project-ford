@@ -53,42 +53,6 @@ body {
     margin: 25px 15px 10px 15px;
 }
 
-/* menu inferior */
-.menu_inf {
-    background-color: #FFFFFF;
-    height: 50px;
-    width: 100%;
-    position: fixed;
-    display: inline;
-    padding: 10px 20px 0px 30px;
-    bottom: 0px;
-    color: #000;
-    list-style:none;
-    border-top: 2px solid #8FB4D2;
-}
-.menu_inf > .col-md-2 {
-    /* float: left; */
-    display: inline;
-    box-sizing: border-box;
-    text-align: -webkit-match-parent;
-}
-.menu_inf select {
-    /* float: left; */
-    padding: 10px 0px 8px 0px;
-    display: inline;
-    box-sizing: border-box;
-    text-align: -webkit-match-parent;
-}
-.menu_inf span {
-    font-size: 1.8em;
-    margin-right: 10px;
-    color: #A2A2A2;
-}
-.menu_inf span:hover {
-    color: #2196F3;
-    cursor: hand;
-}
-
 /* login page */
 #login-dp:focus {
     display: list-item;
