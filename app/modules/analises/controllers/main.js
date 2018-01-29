@@ -11,11 +11,13 @@ ford.controller('mainAnalises', function ($scope, $http, settings) {
   $scope.filter = {
     status: undefined,
     ordem: 'Nome',
-    name: undefined
+    name: undefined,
+    favorite: false
   };
 
   // Watch assiste a todos os filtros presentes na página esperando alguma alteração.
   $scope.$watch('filter', function (newFilter, oldFilter) {
+    console.log(oldFilter);
 
     $(".analises").scrollTop("slow");
     $scope.countpage = 0;
@@ -26,12 +28,15 @@ ford.controller('mainAnalises', function ($scope, $http, settings) {
     } else {
 
       if ((newFilter.status != oldFilter.status) || (newFilter.ordem != oldFilter.ordem)) {
-        $scope.loadItems(newFilter.status, newFilter.ordem, undefined);
+        //$scope.loadItems(newFilter.status, newFilter.ordem, undefined);
       }
       if (newFilter.name != oldFilter.name) {
-        $scope.loadItems(newFilter.status, newFilter.ordem, newFilter.name);
+        //$scope.loadItems(newFilter.status, newFilter.ordem, newFilter.name);
       }
     }
+
+    console.log(newFilter);
+
   }, true);
 
   /*************** Funções de tratamento ***************/
